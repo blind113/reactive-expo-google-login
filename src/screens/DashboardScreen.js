@@ -1,4 +1,3 @@
-import { orange } from "@material-ui/core/colors";
 import React, { Component } from "react";
 import {
     View, 
@@ -18,7 +17,7 @@ class DashboardScreen extends Component{
         const user = navigation.getParam('user');
         
         return (
-            <SafeAreaView style={{backgroundColor:'#f08080',flex:1}}> 
+            <SafeAreaView style={{backgroundColor:'rgba(100, 80, 255, 1.0)',flex:1}}> 
                
                 <View style={style.headderView}>   
                     <Menu 
@@ -38,9 +37,9 @@ class DashboardScreen extends Component{
                         </Text>
                     </ScrollView>
                 </View>   
-                <View>  
+                <View style={style.footerView}>  
                     <Footer/>
-                </View>         
+                </View >         
             </SafeAreaView>
         )
     }
@@ -62,7 +61,7 @@ const style = StyleSheet.create({
         fontSize:50
     },
     footerView:{
-        flex:0.1,
+        flex:0.2,
     }
    
 })
