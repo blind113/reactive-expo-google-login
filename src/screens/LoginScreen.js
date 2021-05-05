@@ -6,6 +6,7 @@ import {
     Button
 } from "react-native";
 
+
 import * as Google from 'expo-google-app-auth';
 
 class LoginScreen extends Component{
@@ -36,6 +37,7 @@ class LoginScreen extends Component{
                 <Button 
                     title ="Conta Google" 
                     onPress = {()=> this.signInWithGoogleAsync()}
+                    style={style.button}
                 />
             </View>
         )
@@ -46,8 +48,13 @@ export default LoginScreen;
 
 const style = StyleSheet.create({
     container:{
-        flex : 1,
-        alignItems : 'center',
-        justifyContent : 'center'
+      backgroundColor: 'orange',
+      flex : 1,
+      alignItems : 'center',
+      justifyContent : 'center'
+    },
+    button:{
+      width:'10',
+      backgroundColor: 'red',
     }
 })
